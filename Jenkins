@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/24p61a67i3/GitHub_Repo.git'
+            }
+        }
+
+        stage('Run Python') {
+            steps {
+                sh 'python3 maths.py'
+            }
+        }
+    }
+}
