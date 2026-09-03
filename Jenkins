@@ -3,16 +3,11 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+        stage('Run Python') {
             steps {
-                git 'https://github.com/24p61a67i3/GitHub_Repo.git'
+                sh 'python3 addition.py'
             }
         }
 
-        stage('Run Python') {
-            steps {
-                sh 'python3 maths.py'
-            }
-        }
     }
 }
